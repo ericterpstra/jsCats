@@ -1,0 +1,105 @@
+/* app css stylesheet */
+
+/**
+ * Global
+body {
+  color: #FFD6D6;
+  background-color: #330000;
+}
+
+.well {
+  background-color: #330000;
+}
+ */
+
+/**
+ * Cat List Partial
+ */
+.catGrid {
+  height: 325px;
+}
+
+.thumbnails > li {
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+
+.thumbnails > .span2 {
+  width: 61px;
+}
+
+.thumbnail {
+	position: relative;
+  border: none;
+  padding: 3px;
+  margin: 0;
+}
+
+.thumbnail:hover {
+	background-color: #006DCC;
+}
+
+.thumbnail > img {
+	height: 55px;
+  width: 55px;
+}
+
+.thumbnail .caption {
+	position: absolute;
+	width: 90%;
+	bottom: 0;
+	padding: 0;
+}
+
+.catName{
+  padding-top: .3em;
+  font-size: 2em;
+	text-align: center;
+}
+
+/**
+ * Cat Detail Partial
+ */
+.catDetail h2 {
+  font-size: 22px;
+  margin: 2px 0 0 0;
+}
+
+.catDetail .well {
+  height: 200px;
+  overflow: auto;
+}
+
+.catDetailPane {
+  height: 275px;
+}
+
+.carousel {
+	height: 200px;
+}
+
+.item > img {
+	display: block;
+	margin: 0 auto;
+	line-height: 1;
+	max-height: 200px;
+}
+
+button.back {
+  margin: 10px 0;
+}
+
+.catOptions {
+  padding-top: .4em;
+  font-size: 1.2em;
+  text-align: center; 
+}
+
+/* Footer */
+.headerMsg {
+  margin: 10px 0;
+  width: 100%
+}
+.headerMsg h4 {
+  text-align: center;
+}

@@ -1,0 +1,45 @@
+<div ng-controller='CatDetailController' class="catDetail">
+
+<!-- Title -->
+<div class="row">
+    <div class="span1">
+      <button class="back btn btn-primary" ng-click="goBack()">Back</button>
+    </div>
+    <div class="span11">
+      <h2 class="pull-right">{{cat.name}}: {{cat.size}} {{cat.age}} {{cat.breed}}</h2>
+    </div>
+</div>		
+
+<!-- Pics and Description -->
+<div class="row catDetailPane">
+	<div class="span5">
+    <!-- The ngCarousel directive gets inserted here to fix a timing error between angularjs and bootstrap -->
+		<div ng-carousel id="myCarousel" class="carousel slide">
+		  <!-- Carousel items -->
+		  <div class="carousel-inner">
+		    <div ng-class="{item:true, active:$first}" ng-repeat="photo in cat.pics">
+		    	<img ng-src="{{photo}}">
+		    </div>
+		  </div>
+		  <!-- Carousel Arrow Buttons -->
+		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
+	</div>
+
+  <!-- Cat Description -->
+	<div class="span7">
+		<div class="well" ng-bind-html-unsafe="cat.description">
+
+		</div>
+	</div>
+</div>
+
+<!-- Footer (Nav buttons and addt'l details -->
+<div class="row">
+  <button ng-click='newCat(catIndex - 1)' class="btn btn-primary span2">Prev Cat</button>
+  <div class="span8 catOptions">{{cat.options}}</div>
+  <button ng-click='newCat(catIndex + 1)' class="btn btn-primary pull-right span2">Next Cat</button>
+</div>
+
+</div>

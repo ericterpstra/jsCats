@@ -1,0 +1,22 @@
+<div ng-controller='CatListController'>
+  <div class="row span12 catGrid">
+    
+    <!-- Grid of cat thumbnails -->
+    <ul class="thumbnails">
+      <li ng-repeat="cat in cats" ng-click="getDetail(cat.id)" class="span2" ng-mouseover="showName(cat.name)">
+        <div class="thumbnail">
+          <!-- Remember to use 'ng-src' for images -->
+          <img ng-src="{{cat.thumbnail}}">
+        </div>
+      </li>
+    </ul>
+
+  </div>
+
+  <!-- Nav buttons and Cat Name -->
+  <div class="row">
+    <button class='btn btn-primary span1' ng-click="changePage('prev')">Prev</button>
+    <div class="catName span10">{{name}}</div>
+    <button class='btn btn-primary pull-right span1' ng-click="changePage('next')">Next</button>
+  </div>
+</div>
