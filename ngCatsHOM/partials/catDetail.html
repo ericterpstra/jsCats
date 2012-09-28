@@ -3,7 +3,7 @@
 <!-- Title -->
 <div class="row">
     <div class="span1">
-      <button class="back btn btn-primary" ng-click="goBack()">Back</button>
+      <button class="back btn btn-custom" ng-click="goBack()">Back</button>
     </div>
     <div class="span11">
       <h2 class="pull-right">{{cat.name}}: {{cat.size}} {{cat.age}} {{cat.breed}}</h2>
@@ -17,6 +17,7 @@
 		<div ng-carousel id="myCarousel" class="carousel slide">
 		  <!-- Carousel items -->
 		  <div class="carousel-inner">
+        <!-- Give the first item in the collection the 'active' class -->
 		    <div ng-class="{item:true, active:$first}" ng-repeat="photo in cat.pics">
 		    	<img ng-src="{{photo}}">
 		    </div>
@@ -35,11 +36,11 @@
 	</div>
 </div>
 
-<!-- Footer (Nav buttons and addt'l details -->
-<div class="row">
-  <button ng-click='newCat(catIndex - 1)' class="btn btn-primary span2">Prev Cat</button>
+<!-- Footer (Nav buttons and addt'l details) -->
+<div class="row listButtons">
+  <button ng-click='newCat(catIndex - 1)' class="btn btn-custom span2">Prev Cat</button>
   <div class="span8 catOptions">{{cat.options}}</div>
-  <button ng-click='newCat(catIndex + 1)' class="btn btn-primary pull-right span2">Next Cat</button>
+  <button ng-click='newCat(catIndex + 1)' class="btn btn-custom pull-right span2">Next Cat</button>
 </div>
 
 </div>

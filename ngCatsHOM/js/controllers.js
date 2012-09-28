@@ -27,6 +27,7 @@ function MainController($scope, $rootScope, eventBroadcast) {
   // ngShow directives to determine whether or not to hide or show the divs
   $scope.viewList = true;
   $scope.viewDetail = false;
+  $scope.numberOfCats = $rootScope.numberOfCats || '';
 }
 // Explicitly inject stuff. This is optional unless you plan on minifying the code.
 MainController.$inject = ['$scope','$rootScope','eventBroadcast'];
@@ -46,18 +47,17 @@ function CatListController($scope,$rootScope,$routeParams,CatsService,$location,
 
   // If there are more cats than can fit in the grid, more pages are needed.  
   // This function will switch to a new page in the grid.
-  $scope.goToPage = function(page) {
+  $scope.goToPage = function goToPage(page) {
     // Figure out the first and last cats that should appear on the page
     var first = (parseInt(page) * catsPerPage) - catsPerPage;
     var last = first + catsPerPage;
     
     // Get a subset of the catCollection based on the first and last cats defined above.
     $scope.cats = $rootScope.catCollection.slice(first,last);
-    
     // Store the current page for later reference.
     $scope.page = page;
   };
-
+  
   // This handles the Next/Prev buttons to switch pages. 
   $scope.changePage = function(pagingAction) {
     var page = 1;
@@ -76,7 +76,7 @@ function CatListController($scope,$rootScope,$routeParams,CatsService,$location,
   }
 
   // Define the maximum number of cats that will appear in the list/grid
-  var catsPerPage = 75;
+  var catsPerPage = 60;
 
   // If the catCollection is not yet defined, fetch the data, otherwise go to page one.
   if( !$rootScope.catCollection ) {
@@ -86,6 +86,7 @@ function CatListController($scope,$rootScope,$routeParams,CatsService,$location,
       // so it can be easily shared between controllers.
       $rootScope.catCollection = data
       $scope.goToPage(1);
+      $rootScope.numberOfCats = $rootScope.catCollection.length;
     });
   } else {
     // If catsCollection is defined, go to page 1.
@@ -94,7 +95,6 @@ function CatListController($scope,$rootScope,$routeParams,CatsService,$location,
   }
 }
 CatListController.$inject = ['$scope','$rootScope', '$routeParams', 'CatsService', '$location','eventBroadcast'];
-
 
 /**
  * CAT DETAIL CONTROLLER

@@ -1,7 +1,8 @@
 'use strict';
 
-
 /**
+ * ### CatService
+ * 
  * This module contains the service that gets the remote data from the PetFinder API.
  * It grabs all the adoptable cats from the House of Mews (HoM) shelter in Memphis, TN.
  * Because the HoM updates their info on PetFinder once per week, I've created a small PHP script
@@ -42,6 +43,8 @@ angular.module('catService', ['ngResource','CatServiceHelper'])
 
 
 /**
+ * ### CatServiceHelper
+ * 
  * This module is basically a translator for data retrieved by CatService.
  * The Petfinder API was originally set up to communicate via XML, and they added
  * JSON as an option later.  As such, the JSON data returned is a bunch of ugly nested objects.

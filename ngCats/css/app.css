@@ -1,0 +1,77 @@
+/* app css stylesheet */
+
+/**
+ * Global
+ */
+body {
+  line-height: 16px
+}
+
+/**
+ * Cat List Partial
+ */
+.thumbnail {
+	height: 140px;
+	position: relative;
+}
+
+.thumbnail:hover {
+	background-color: #EEE;
+}
+
+.thumbnail > img {
+	max-height: 100px;
+}
+
+.thumbnail .caption {
+	position: absolute;
+	width: 90%;
+	bottom: 0;
+	padding: 0;
+}
+
+.caption > h4{
+	text-align: center;
+}
+
+#listNav .btn:first-child {
+margin-left: 0px;
+}
+
+/**
+ * Cat Detail Partial
+ */
+.catDetail h2 {
+  font-size: 20px;
+  margin: 2px 0 0 0;
+}
+
+.catDetail .well {
+  height: 200px;
+  overflow: auto;
+}
+
+.catDetailPane {
+  height: 275px;
+}
+
+.carousel {
+	height: 200px;
+}
+
+.item > img {
+	display: block;
+	margin: 0 auto;
+	line-height: 1;
+	max-height: 200px;
+}
+
+button.back {
+  margin: 10px 0;
+}
+
+.catOptions {
+  padding-top: .4em;
+  font-size: 1.2em;
+  text-align: center; 
+}

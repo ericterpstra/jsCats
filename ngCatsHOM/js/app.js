@@ -47,4 +47,4 @@ angular.module('catApp', ['catService'])
           $(elm).carousel('pause');
         }); 
     }
-});       
+});

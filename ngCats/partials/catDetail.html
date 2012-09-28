@@ -1,0 +1,32 @@
+<!-- Title -->
+<div class="catDetail">
+<div class="row">
+    <div class="span1">
+      <button class="back btn btn-primary" ng-click="goBack()">Back</button>
+    </div>
+    <div class="span11">
+      <h2 class="pull-right">{{cat.name}}: {{cat.size}} {{cat.age}} {{cat.breed}}</h2>
+    </div>
+</div>		
+
+<!-- Pics and Description -->
+<div class="row">
+	<div class="span5">
+      <catcarousel pics="cat.pics"></catcarousel>
+	</div>
+
+  <!-- Cat Description -->
+	<div class="span7">
+		<div class="well" ng-bind-html-unsafe="cat.description">
+
+		</div>
+	</div>
+</div>
+
+<!-- Footer (Nav buttons and addt'l details) -->
+<div class="row">
+  <button ng-click='newCat(catIndex - 1)' class="btn btn-primary span2">Prev Cat</button>
+  <div class="span8 catOptions">{{cat.options}}</div>
+  <button ng-click='newCat(catIndex + 1)' class="btn btn-primary pull-right span2">Next Cat</button>
+</div>
+</div>

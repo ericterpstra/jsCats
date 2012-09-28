@@ -1,0 +1,13 @@
+<!-- The ngCarousel directive gets inserted here to fix a timing error between angularjs and bootstrap -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <!-- Give the first item in the collection the 'active' class -->
+    <div ng-class="{item:true, active:$first}" ng-repeat="photo in pics">
+      <img ng-src="{{photo}}">
+    </div>
+  </div>
+  <!-- Carousel Arrow Buttons -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
