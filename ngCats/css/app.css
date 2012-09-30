@@ -34,6 +34,10 @@ body {
 	text-align: center;
 }
 
+.progress {
+  margin: 15px 0;
+}
+
 #listNav .btn:first-child {
 margin-left: 0px;
 }

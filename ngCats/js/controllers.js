@@ -36,10 +36,12 @@ function CatListController($scope,$rootScope,$routeParams,CatsService,$location)
 
   // If the cat collection does not exist, retrieve it with CatsService. Otherwise go to the requested page.
   if( !CatsService.getCatCollection() || !CatsService.getCatCollection().length ) {
+    $scope.stillLoading = true;
     CatsService.getCats(function (data) {
       // The page number can be found in the URL. Get it via $routeParams, or set page to 1 if undefined.
       var page = $routeParams.page || 1;
       $scope.goToPage(page);
+      $scope.stillLoading = false;
     });
   } else {
     // The cat collection exists, so just go to whatever page is specified in the url. 

@@ -1,5 +1,10 @@
 <div class="row span12">
-  
+  <div ng-show="stillLoading">
+    <h4>Loading Cats...</h4>
+    <div class="progress progress-striped active">
+      <div class="bar" style="width: 100%;"></div>
+    </div>
+  </div>
   <!-- Grid of cat thumbnails -->
   <ul class="thumbnails">
     <li ng-repeat="cat in cats" ng-click="getDetail(cat.id)" class="span2">
