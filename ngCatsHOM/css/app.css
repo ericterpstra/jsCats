@@ -66,7 +66,7 @@ li {
  * Cat List Partial
  */
 .catGrid {
-  height: 325px;
+  height: 255px;
 }
 
 .thumbnails > li {
@@ -118,6 +118,12 @@ li {
 .listButtons button.btn{
   margin-left: 28px;
 }
+
+.listButtons p {
+  font-size: 12px;
+  line-height: 2px;
+  padding-left: 6px;
+}
 /**
  * Cat Detail Partial
  */
@@ -162,11 +168,12 @@ button.back {
 
 /* Footer */
 .headerMsg {
-  margin: 10px 0;
+  margin: 0px;
   width: 100%
   text-align: center;
 }
 
 .headerMsg h5, .headerMsg h6{
+  line-height: 2px;
   text-align: center;
 }
