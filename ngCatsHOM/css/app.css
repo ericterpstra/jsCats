@@ -109,6 +109,8 @@ li {
 
 .listButtons {
   width: 965px;
+  clear: both;
+  padding-top: 10px;
 }
 
 .listButtons .btn:first-child {
@@ -137,23 +139,23 @@ li {
 }
 
 .catDetail .well {
-  height: 200px;
+  height: 160px;
   overflow: auto;
 }
 
 .catDetailPane {
-  height: 275px;
+  height: 220px;
 }
 
 .carousel {
-	height: 200px;
+  height: 200px;
 }
 
 .item > img {
-	display: block;
-	margin: 0 auto;
-	line-height: 1;
-	max-height: 200px;
+  display: block;
+  margin: 0 auto;
+  line-height: 1;
+  max-height: 200px;
 }
 
 button.back {
@@ -164,6 +166,10 @@ button.back {
   padding-top: .4em;
   font-size: 1.2em;
   text-align: center; 
+}
+
+#myCarousel a:visited, #myCarousel a.visited, #myCarousel a:link {
+  text-decoration: none;
 }
 
 /* Footer */
