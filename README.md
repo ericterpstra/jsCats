@@ -18,6 +18,6 @@ An example is viewable at http://ericterpstra.com/apps/jsCats/jsCatsHOM/
 
 ## ngCats
 A much improved version of the cats project.  It no longer looks like the original, but a lot of bad practices were fixed 
-and a couple new features were added.  Take a look at http://ericterpstra.com/apps/jsCats/jsCats/
+and a couple new features were added.  Take a look at http://ericterpstra.com/apps/jsCats/ngCats/
 
 That's it for now...
